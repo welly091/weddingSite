@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Your Wedding Invitation">
+    <meta property="og:description" content="Join us in celebration of our wedding!">
+    <meta property="og:image" content="https://your-image-url.com">
+    <title>Your Wedding Invitation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #section1, #section3 {
+            background-size: cover;
+            background-position: center;
+        }
+        #section1 {
+            height: 50vh;
+        }
+        #section1 img{
+            height: auto;
+            width: 100%;
+        }
+        #section2 {
+            background-color: rgba(243, 238, 243, 0.918);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .content {
+            box-shadow: 0 1px 2px 0 rgb(60 64 67/30%), 0 2px 6px 2px rgb(60 64 67/15%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .content p {
+            margin: 10px 0;
+            color: #333;
+            font-size: 17px;
+        }
+        .content button:hover{
+            background-color: purple;
+            color: wheat;
+        }
+        .map-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .section3 {
+            background-color: rgb(240, 210, 173);
+        }
+
+        #section3 img {
+            margin: 20px;
+            padding: 10px;
+            width: 70%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            text-align: center;
+        }
+        /* Media Query for Smartphones */
+        @media (max-width: 768px) {
+            .content {
+                padding: 10px;
+            }
+            #section3 img {
+                width: 90%;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Section 1: Photo of the couple -->
+    <div class="section" id="section1" style="background-image: url('0J1A0412.jpg');">
+    </div>
+    <header>
+        <h1 class="title1" style="font-family: Miama;">Welly & Brenda</h1>
+        <h1 class="title2">🤵🏻謝煜唯 與 周家樺 👰🏻</h1>
+        <p style="color: purple;">~誠摯邀請您參加我們的婚宴~</p>
+    </header>
+    <!-- Section 2: Wedding Reception Details -->
+    <div class="section" id="section2">
+        
+        <div class="content">
+            <h2>婚禮資訊</h2>
+            <p>時間: 2024/01/05 (五) 晚上 6:30</p>
+            <p>地點: 大直典華 蜷川實花藝術空間</p>
+            <p>地址: 台北市中山區直福路8號 5F</p>
+            <button class="map-button" onclick="window.open('https://maps.app.goo.gl/VzcrEpaLz4tfhZcg7', '_blank')">打開 Google Maps</button>
+            <button class="map-button" onclick="window.open('https://www.denwell.com/%e5%a4%a7%e7%9b%b4-%e4%ba%a4%e9%80%9a%e8%b3%87%e8%a8%8a/', '_blank')">大直典華-交通資訊</button>
+            
+        </div>
+    </div>
+
+    <!-- Section 3: Another photo of the couple -->
+    <div class="section" id="section3" ">
+        <img src="0J1A0439.jpg" alt="Couple Photo">
+    </div>
+
+</body>
+</html>
