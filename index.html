@@ -90,7 +90,7 @@
             text-align: center;
             justify-content: center;
             align-items: center;
-            font-size: 28px;
+            font-size: 22px;
             font-family: LiHei Pro;
             
         }
@@ -161,7 +161,7 @@
       // Display the result in the element with id="demo"
       document.getElementById("demo").innerHTML = `
         <div class="mycountdown">
-            <h3 ">距離我們的婚宴：</h3>
+            <h3 ">距離婚宴還有：</h3>
             <p>${days + "天 " + hours + "時 "
             + minutes + "分 " + seconds + "秒 "}</p>
         </div>
@@ -170,7 +170,7 @@
       // If the count down is finished, write some text
       if (distance < 0) {
         clearInterval(x);
-        document.getElementById("demo").innerHTML = `<div class="mycountdown">${"婚宴即將開始，歡迎入座"}</div>`;
+        document.getElementById("demo").innerHTML = `<div class="mycountdown"><p>${"婚宴即將開始"}</p><p>${"歡迎入座"}</p></div>`;
       }
     }, 1000);
     </script>
