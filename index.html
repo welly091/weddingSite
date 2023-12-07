@@ -69,20 +69,30 @@
             border-radius: 5px;
             text-decoration: none;
         }
-        .section3 {
-            background-color: rgb(240, 210, 173);
-        }
+        #section3 {
+            background-color: rgba(243, 238, 243, 0.918);
 
+        }
         #section3 img {
             margin: 20px;
-            padding: 10px;
             width: 70%;
             max-width: 300px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            border: 5px solid white;
+            
         }
         header {
             text-align: center;
+        }
+        .mycountdown{
+            padding : 10px;
+            margin: 70px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+            font-family: LiHei Pro;
+            
         }
         /* Media Query for Smartphones */
         @media (max-width: 768px) {
@@ -97,7 +107,7 @@
     </style>
 </head>
 <body>
-
+    
     <!-- Section 1: Photo of the couple -->
     <div class="section" id="section1" style="background-image: url('');">
         <img src="0J1A0412.jpg">
@@ -120,11 +130,48 @@
             
         </div>
     </div>
-
+    <!-- Count down: Count down -->
+    <div id="demo"></div>
+    
     <!-- Section 3: Another photo of the couple -->
     <div class="section" id="section3" ">
         <img src="0J1A0439.jpg" alt="Couple Photo">
     </div>
     <p class="fs-7" style="text-align: center; font-size: 12px;">© 2023 Powered by GeekyWelly.com</p>
 </body>
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 5, 2024 18:30:00 GMT+0800").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get today's date and time
+      var now = new Date().getTime();
+    
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+    
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+      // Display the result in the element with id="demo"
+      document.getElementById("demo").innerHTML = `
+        <div class="mycountdown">
+            <h3 ">距離我們的婚宴：</h3>
+            <p>${days + "天 " + hours + "時 "
+            + minutes + "分 " + seconds + "秒 "}</p>
+        </div>
+      `;
+    
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = `<div class="mycountdown">${"婚宴即將開始，歡迎入座"}</div>`;
+      }
+    }, 1000);
+    </script>
 </html>
